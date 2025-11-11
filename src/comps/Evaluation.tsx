@@ -14,9 +14,6 @@ const Evaluation = ({ evaluation, onReset }: EvaluationProps) => {
       <div className="flex justify-between items-start gap-4">
         <div>
           <h2>Your Evaluation</h2>
-          <p>
-            Personalized insights based on your resume and O-1A visa criteria.
-          </p>
         </div>
 
         {onReset && (
