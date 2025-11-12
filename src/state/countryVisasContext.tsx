@@ -24,6 +24,7 @@ const saveCountryVisasToLocal = (countryVisas: CountryVisa[]) => {
   localStorage.setItem(VISAS_STORAGE_KEY, JSON.stringify(countryVisas));
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const CountryVisasContext = createContext<CountryVisa[] | undefined>(undefined);
 
 export const CountryVisasProvider = ({ children }: CountryVisasProviderProps) => {
@@ -37,6 +38,7 @@ export const CountryVisasProvider = ({ children }: CountryVisasProviderProps) =>
         }
       });
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(()=>{
@@ -55,7 +57,7 @@ export const CountryVisasProvider = ({ children }: CountryVisasProviderProps) =>
   );
 };
 
-
+// eslint-disable-next-line react-refresh/only-export-components
 export const useCountryVisas = (): CountryVisa[] => {
   const context = useContext(CountryVisasContext);
 
